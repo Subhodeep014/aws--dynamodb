@@ -22,7 +22,8 @@ export default function FacialRecognition() {
 
     try {
       // Upload image to S3
-      const response=await fetch(`https://aa6dargym4.execute-api.ap-south-1.amazonaws.com/devv/visitor-image-storage-v1/${visitorImageName}.jpeg`, {
+      // use your own api link in fetch
+      const response=await fetch(`https://amkn545154.execute-api.ap-south-1.amazonaws.com/d/visitor-image-storage-v1/${visitorImageName}.jpeg`, {
         method: "PUT",
         headers: {
           'Content-Type': 'image/jpeg'
@@ -55,7 +56,7 @@ export default function FacialRecognition() {
   };
 
   const authenticate = async (visitorImageName) => {
-    const requestUrl = `https://aa6dargym4.execute-api.ap-south-1.amazonaws.com/devv/employee?objectKey=${encodeURIComponent(visitorImageName)}.jpeg`
+    const requestUrl = `https://bjhnjnjhhgh.execute-api.ap-south-1.amazonaws.com/d/employee?objectKey=${encodeURIComponent(visitorImageName)}.jpeg`
     console.log("fetching")
     const response = await fetch(requestUrl, {
       method: "GET",
