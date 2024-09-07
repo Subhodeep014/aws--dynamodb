@@ -1,0 +1,4 @@
+aws rekognition create-collection --collection-id employees region ap-south-1
+
+make changes to collection id as reires, here it is employees but you can change it according to your need
+region i upto you choice
